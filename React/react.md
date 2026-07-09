@@ -4,7 +4,9 @@
 - State and DOM didn't sync
 
 React is a library (more freedom)
+
 For mobile --> React-Native
+
 For web --> React-DOM
 
 Creating react app (don't use this, takes time alot )
@@ -16,3 +18,6 @@ Creating react app using Vite Package
 ```
 npm create vite@latest
 ```
+
+ReactDOM --> creates a virtual DOM through which it can compare the differences with main DOM.
+

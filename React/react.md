@@ -21,3 +21,5 @@ npm create vite@latest
 
 ReactDOM --> creates a virtual DOM through which it can compare the differences with main DOM.
 
+- Functions name should be capitalize
+- File type should be jsx while returning html elements, if we have created the project with vite

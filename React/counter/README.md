@@ -1,16 +1,10 @@
-# React + Vite
+## Project Learnings: React Hooks & State
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I learned the core fundamentals of React state management and why Hooks are essential:
 
-Currently, two official plugins are available:
+* **The Problem (Without Hooks):** Regular JavaScript variables change their values behind the scenes, but they **do not trigger a UI re-render**. The UI remains frozen because React doesn't know it needs to update the DOM.
+* **The Solution (`useState`):** React Hooks solve this problem. `useState` allows us to create state variables. When the state changes, React automatically intercepts the change and re-renders the component, instantly updating the UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Key Implementation
+* Implemented a Counter application utilizing the `useState` hook.
+* Learned how to update state safely using handler functions (`addValue` and `removeValue`).

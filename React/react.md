@@ -32,3 +32,16 @@ React controls UI updation
 
 ### useState Hook
 responsible for changing the state (propagate the change in the DOM), returns variable and a function
+
+### Virtual DOM, Fibre and reconciliation
+
+**createRoot** creates a DOM like structure and compare the changes and only updated the changed part
+
+**React Fibre** is an ongoing implementation of React's core algorithm
+
+Key features include:
+- Ability to pause
+- Abort
+- Reuse the work
+
+Reconcilation: the algorithm react uses to differenciate one tree with another

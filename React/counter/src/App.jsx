@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
@@ -21,13 +18,12 @@ function App() {
       
   }
   return (
-    <>
-      <h1>Counter App</h1>
-      <h2>Counter value: {counter}</h2>
-      <button onClick={addValue}>Increment</button>
-      <br/>
-      <button onClick={removeValue}>Decrement</button>
-    </>
+    <div className="counter-card">
+      <h2>Counter App</h2>
+      <h1>{counter}</h1>
+      <button id="increment" onClick={addValue}>Increment</button>
+      <button id="decrement" onClick={removeValue}>Decrement</button>
+    </div>
   )
 }
 

@@ -23,3 +23,12 @@ ReactDOM --> creates a virtual DOM through which it can compare the differences 
 
 - Functions name should be capitalize
 - File type should be jsx while returning html elements, if we have created the project with vite
+
+## React Hooks
+
+without hooks --> Problem in UI updation
+
+React controls UI updation
+
+### useState Hook
+responsible for changing the state (propagate the change in the DOM), returns variable and a function

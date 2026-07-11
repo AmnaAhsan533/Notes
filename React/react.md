@@ -45,3 +45,6 @@ Key features include:
 - Reuse the work
 
 Reconcilation: the algorithm react uses to differenciate one tree with another
+
+### Props 
+makes component reusable

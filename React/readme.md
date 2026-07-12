@@ -16,7 +16,8 @@ Traditional web development architectures decoupled application states from the 
 ### 2. Modern Compilation & Build Systems
 * **Legacy Workflows (`create-react-app`):** Historically utilized heavy Webpack/Babel dependency graphs, leading to sluggish server startup cycles and degraded developer performance.
 * **Modern Build Automation (Vite):** Leverages native ES modules and high-speed Go-based compilers (`esbuild`/`Oxc`) to provide instantaneous Hot Module Replacement (HMR).
-* **Structural Tooling Restrictions:** * Component naming conventions strictly require **Capitalized PascalCase** syntax to differentiate custom user components from standard HTML5 elements.
+* **Structural Tooling Restrictions:** 
+    * Component naming conventions strictly require **Capitalized PascalCase** syntax to differentiate custom user components from standard HTML5 elements.
     * When utilizing Vite tooling configurations, any file returning a declarative JSX template block must carry the explicit **`.jsx`** extension to trigger correct compiler processing.
 
 ---

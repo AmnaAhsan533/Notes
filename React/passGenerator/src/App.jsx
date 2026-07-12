@@ -10,8 +10,8 @@ function App() {
   const passGenerator = useCallback(() => {
     let password = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    if(num) str += "0123456789"
-    if(char) str+= "!@#$%^&*-_+=[]{}~`"
+    if(numAllowed) str += "0123456789"
+    if(charAllowed) str+= "!@#$%^&*-_+=[]{}~`"
 
     for(let i = 1; i<= array.length; i++){
       let char = Math.floor(Math.random() * str.length + 1)

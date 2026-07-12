@@ -50,6 +50,10 @@ Reconcilation: the algorithm react uses to differenciate one tree with another
 makes component reusable
 
 ### useEffect
+react Hook that lets you synchronize a component with an external system
 
 ### useCallback
 react Hook that lets you cache a function between re-renders.
+
+### useRef
+returns a mutable ref object whose .current property is innitialized to the pass argument

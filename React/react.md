@@ -48,3 +48,8 @@ Reconcilation: the algorithm react uses to differenciate one tree with another
 
 ### Props 
 makes component reusable
+
+### useEffect
+
+### useCallback
+react Hook that lets you cache a function between re-renders.

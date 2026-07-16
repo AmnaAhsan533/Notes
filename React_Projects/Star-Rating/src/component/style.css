@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e1dfdf;
+}
+.active{
+    color: #fff700;
+}
+
+.inactive{
+    color: #000000;
+}

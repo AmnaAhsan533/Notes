@@ -1,0 +1,115 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e9ebf0; /* Soft background so the white cards pop */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns content to the top on longer lists */
+  padding-top: 40px;
+}
+
+/* Wrapper sets the maximum width of the layout */
+.wrapper {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper button{
+    padding: 10px 20px;
+    background-color: #97bdfa;
+    color: #013890;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* We remove the background, borders, and shadows from the main container */
+.accordion {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adds space between each separate question card */
+}
+
+/* Each item is now its own freestanding card */
+.item {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Subtle, elegant shadow */
+  border: 1px solid #eef2f5;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Subtle lift effect on hover */
+.item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Header/Title Panel inside the card */
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.title h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.title span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate the icon when active */
+.item.active .title span {
+  transform: rotate(45deg);
+  color: #3b82f6; /* Optional: turn blue when open */
+}
+
+/* Content Panel */
+.content {
+  padding: 0 20px 20px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  border-top: 1px dashed #e2e8f0; /* Optional: subtle line separating title & content when open */
+  padding-top: 15px;
+  animation: slideDown 0.25s ease-out;
+}
+
+/* Smooth Entrance Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

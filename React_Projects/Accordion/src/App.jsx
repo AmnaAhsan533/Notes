@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './App.css'
+import Accordion from './components/accordion'
 
 function App() {
 
   return (
     <>
-      <h1>Accordion</h1>
+      <Accordion />
     </>
   )
 }

@@ -1,0 +1,94 @@
+/* 1. Global Reset to eliminate scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Guaranteed no scrollbars */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Main full-screen wrapper */
+.color-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers the content vertically and horizontally */
+  transition: background 0.4s ease; /* Smooth transition when colors switch */
+  position: relative;
+}
+
+/* 3. Button row spacing */
+.button-container {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 40px; /* Pin buttons to the top, centered */
+}
+
+/* 4. Modern Glassmorphic Buttons */
+button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Style for the active type button selection */
+button.active {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #ffffff;
+}
+
+/* Special highlight style for the generate button */
+.generate-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 5. Display Text Layout */
+.display-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Keeps text legible over light colors */
+}
+
+.display-panel h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.display-panel h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+}

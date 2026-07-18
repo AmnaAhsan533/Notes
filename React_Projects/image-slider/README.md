@@ -1,16 +1,19 @@
-# React + Vite
+## React Image Slider Concepts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements an interactive image slider component. Below are the key React and development concepts utilized in the code:
 
-Currently, two official plugins are available:
+### 1. State Management (`useState`)
+* **Data Fetching:** Tracks remote API data via an `images` array state.
+* **UI Feedback:** Handles `loading` and `errMsg` conditional states to improve user experience during network requests.
+* **Component Indexing:** Uses `currSlide` (integer) to actively track which image is currently in view.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 2. Side Effects & Dependency Tracking (`useEffect`)
+* Syncs the component state with an external API resource upon initial mount.
+* Leverages a dependency array `[url, page, limit]` to trigger a fresh data fetch only when configuration props change.
 
-## React Compiler
+### 3. Asynchronous Operations
+* Implements a standard `async/await` pattern within a `try...catch` block to handle network responses safely and prevent component crashes on network errors.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 4. Conditional Rendering
+* Uses JavaScript ternary operators (`condition ? execution : null`) to conditionally load fallback UI states (loading text/error blocks) and prevent rendering crashes before data arrives.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
